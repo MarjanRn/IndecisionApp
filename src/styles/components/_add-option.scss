@@ -1,0 +1,36 @@
+.add-option-error {
+    color: $off-white;
+    font-style: italic;
+    margin: $m-size 0 0 0;
+    padding: 0 $m-size;
+}
+
+.add-option {
+    display: flex;
+    flex-direction: column;
+    padding: $m-size;
+}
+
+.add-option__input {
+    background: $dark-blue;;
+    flex-grow: 1; // by this, input field takes the whole space in the form and shrinks and expands if user changes the screen size.
+    border: none;
+    color: $off-white;
+    border-bottom: .3rem solid darken($dark-blue, 10%);
+    margin: 0 0 $s-size 0;
+    padding: $s-size;
+}
+
+
+//@media helps to set up a simple media query to create some mobile specific styles for our application.
+@media (min-width: $desktop-breakpoint) { //this is going to say up until 45rems apply these styles so the max with we want to apply these styles
+    //at is 45rem which means it's going to show up for small devices. devices less than this wide.
+    .add-option{
+        flex-direction: row;
+    }
+
+    .add-option__input {
+        margin: 0 $s-size 0 0;
+    }
+
+}
